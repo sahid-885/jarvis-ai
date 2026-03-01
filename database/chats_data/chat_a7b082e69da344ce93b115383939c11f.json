@@ -1,0 +1,13 @@
+{
+  "session_id": "a7b082e6-9da3-44ce-93b1-15383939c11f",
+  "messages": [
+    {
+      "role": "user",
+      "content": "open WhatsApp"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm not capable of directly controlling your device or accessing external apps, Shahid. Opening WhatsApp is outside what I can do."
+    }
+  ]
+}
