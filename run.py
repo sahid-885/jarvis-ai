@@ -61,6 +61,9 @@ you want.
 import os
 import uvicorn
 
+print("🚀 Starting server...")  # debug
+
+
 # -----------------------------------------------------------------------------
 # ENTRY POINT
 # -----------------------------------------------------------------------------
@@ -68,6 +71,8 @@ import uvicorn
 # not when it is imported by another module.
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
+    print(f"Using port: {port}")
+
     uvicorn.run(
         # ── "app.main:app" ──────────────────────────────────────────────────
         # This is a string import path, not a direct Python import. It tells
@@ -98,5 +103,19 @@ if __name__ == "__main__":
         # server picks up changes without you manually stopping and restarting it.
         # In production, set reload=False (or omit it) because file-watching adds
         # overhead and you don't want unreviewed changes going live.
-        reload=False
+        reload=True
     )
+
+
+
+
+import os
+import uvicorn
+
+print("🚀 Starting server...")  # debug
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    print(f"Using port: {port}")
+
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port)
