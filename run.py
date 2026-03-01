@@ -61,8 +61,7 @@ you want.
 import os
 import uvicorn
 
-print("🚀 Starting server...")  # debug
-
+print("🚀 Starting server...") 
 
 # -----------------------------------------------------------------------------
 # ENTRY POINT
@@ -105,17 +104,3 @@ if __name__ == "__main__":
         # overhead and you don't want unreviewed changes going live.
         reload=True
     )
-
-
-
-
-import os
-import uvicorn
-
-print("🚀 Starting server...")  # debug
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))
-    print(f"Using port: {port}")
-
-    uvicorn.run("app.main:app", host="0.0.0.0", port=port)
