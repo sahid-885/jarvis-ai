@@ -1273,7 +1273,7 @@ def run():
     - reload=True — auto-restart when Python files change (dev convenience).
     - log_level="info" — show request logs in the terminal.
     """
-    port = int(os.environ.get("PORT", 8000))
+    port = int(os.environ.get("PORT", 10000))
     uvicorn.run(
         "app.main:app",
         host="0.0.0.0",
