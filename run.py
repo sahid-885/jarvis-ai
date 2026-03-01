@@ -67,7 +67,7 @@ import uvicorn
 # Only run uvicorn when this file is executed directly (python run.py),
 # not when it is imported by another module.
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
+    port = int(os.environ.get("PORT", 8000))
     uvicorn.run(
         # ── "app.main:app" ──────────────────────────────────────────────────
         # This is a string import path, not a direct Python import. It tells
