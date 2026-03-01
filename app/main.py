@@ -420,6 +420,9 @@ app = FastAPI(
     redoc_url=None,  # No /redoc page
     openapi_url=None # No /openapi.json (disables docs entirely)
 )
+@app.get("/")
+def root():
+    return {"status": "Jarvis running 🚀"}
 
 # --- CORS (Cross-Origin Resource Sharing) Middleware ---
 # Browsers block JavaScript from making requests to a different origin
