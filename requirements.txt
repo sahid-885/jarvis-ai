@@ -17,3 +17,4 @@ tavily-python
 cohere
 langchain-huggingface
 edge-tts
+uvicorn
