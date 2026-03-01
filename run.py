@@ -58,6 +58,7 @@ you want.
 """
 
 # ─── uvicorn: the ASGI server that runs our FastAPI application ─────────────
+import os
 import uvicorn
 
 # -----------------------------------------------------------------------------
@@ -66,6 +67,7 @@ import uvicorn
 # Only run uvicorn when this file is executed directly (python run.py),
 # not when it is imported by another module.
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
     uvicorn.run(
         # ── "app.main:app" ──────────────────────────────────────────────────
         # This is a string import path, not a direct Python import. It tells
@@ -87,7 +89,7 @@ if __name__ == "__main__":
         # The TCP port to listen on. 8000 is a common default for development
         # servers. After starting, the API is at http://localhost:8000.
         # If port 8000 is already in use, change this to another number (e.g. 8001).
-        port=10000,
+        port=port,
 
         # ── reload=True ────────────────────────────────────────────────────
         # Enables auto-reload: uvicorn watches all .py files in the project and
@@ -96,5 +98,5 @@ if __name__ == "__main__":
         # server picks up changes without you manually stopping and restarting it.
         # In production, set reload=False (or omit it) because file-watching adds
         # overhead and you don't want unreviewed changes going live.
-        reload=True
+        reload=False
     )
