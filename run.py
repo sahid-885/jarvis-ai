@@ -59,7 +59,10 @@ you want.
 
 # ─── uvicorn: the ASGI server that runs our FastAPI application ─────────────
 import os
+from dotenv import load_dotenv
 import uvicorn
+
+load_dotenv("/etc/secrets/.env")
 
 print("🚀 Starting server...") 
 
