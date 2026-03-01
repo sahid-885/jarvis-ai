@@ -1,3 +1,10 @@
+import os
+from dotenv import load_dotenv
+
+# Load .env from Render secret file path
+load_dotenv("/etc/secrets/.env")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 """
 J.A.R.V.I.S MAIN API
 ====================
