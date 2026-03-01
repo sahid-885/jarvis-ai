@@ -102,5 +102,5 @@ if __name__ == "__main__":
         # server picks up changes without you manually stopping and restarting it.
         # In production, set reload=False (or omit it) because file-watching adds
         # overhead and you don't want unreviewed changes going live.
-        reload=True
+        reload=False
     )
